@@ -49,7 +49,7 @@ function App() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%)',
+      background: 'linear-gradient(135deg, #0a1128 0%, #1e2746 100%)',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -58,21 +58,21 @@ function App() {
     }}>
       <h1 style={{
         marginBottom: 24,
-        color: '#3730a3',
+        color: '#fff',
         letterSpacing: 1,
         fontWeight: 800,
         fontSize: 36,
-        textShadow: '0 2px 8px #e0e7ff'
+        textShadow: '0 2px 8px #1e2746'
       }}>
         👕 Clothing Describer
       </h1>
       <form
         onSubmit={handleSubmit}
         style={{
-          background: '#fff',
+          background: '#192040',
           padding: 36,
           borderRadius: 18,
-          boxShadow: '0 4px 24px rgba(55,48,163,0.10)',
+          boxShadow: '0 4px 24px rgba(10,17,40,0.25)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -84,14 +84,14 @@ function App() {
         <label
           htmlFor="file-upload"
           style={{
-            background: '#6366f1',
+            background: '#233d7a',
             color: '#fff',
             padding: '10px 22px',
             borderRadius: 8,
             cursor: 'pointer',
             fontWeight: 600,
             fontSize: 16,
-            boxShadow: '0 2px 8px #e0e7ff',
+            boxShadow: '0 2px 8px #1e2746',
             transition: 'background 0.2s',
             marginBottom: 8,
             border: 'none',
@@ -118,8 +118,8 @@ function App() {
               objectFit: 'cover',
               borderRadius: 12,
               marginBottom: 8,
-              border: '2px solid #6366f1',
-              boxShadow: '0 2px 12px #e0e7ff'
+              border: '2px solid #233d7a',
+              boxShadow: '0 2px 12px #1e2746'
             }}
           />
         )}
@@ -131,12 +131,12 @@ function App() {
               padding: '10px 24px',
               borderRadius: 8,
               border: 'none',
-              background: loading ? '#a5b4fc' : '#3730a3',
+              background: loading ? '#3b4d7a' : '#233d7a',
               color: '#fff',
               fontWeight: 700,
               fontSize: 16,
               cursor: loading ? 'not-allowed' : 'pointer',
-              boxShadow: '0 2px 8px #e0e7ff',
+              boxShadow: '0 2px 8px #1e2746',
               transition: 'background 0.2s'
             }}
           >
@@ -147,7 +147,7 @@ function App() {
                   width: 18,
                   height: 18,
                   border: '3px solid #fff',
-                  borderTop: '3px solid #6366f1',
+                  borderTop: '3px solid #233d7a',
                   borderRadius: '50%',
                   animation: 'spin 1s linear infinite',
                   marginRight: 8,
@@ -165,12 +165,12 @@ function App() {
               padding: '10px 18px',
               borderRadius: 8,
               border: 'none',
-              background: '#e0e7ff',
-              color: '#3730a3',
+              background: '#1e2746',
+              color: '#fff',
               fontWeight: 600,
               fontSize: 16,
               cursor: loading ? 'not-allowed' : 'pointer',
-              boxShadow: '0 2px 8px #e0e7ff',
+              boxShadow: '0 2px 8px #1e2746',
               transition: 'background 0.2s'
             }}
           >
@@ -180,15 +180,15 @@ function App() {
         {description && (
           <div style={{
             marginTop: 18,
-            background: description.startsWith('Error') ? '#fee2e2' : '#f1f5f9',
-            color: description.startsWith('Error') ? '#b91c1c' : '#22223b',
+            background: description.startsWith('Error') ? '#3b1c1c' : '#232b4d',
+            color: description.startsWith('Error') ? '#ffb4b4' : '#fff',
             padding: 18,
             borderRadius: 10,
             width: '100%',
             textAlign: 'center',
             fontSize: 17,
             fontWeight: 500,
-            boxShadow: '0 2px 8px #e0e7ff'
+            boxShadow: '0 2px 8px #1e2746'
           }}>
             {description}
           </div>
