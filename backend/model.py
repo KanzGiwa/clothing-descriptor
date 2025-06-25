@@ -2,7 +2,7 @@ from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 import numpy as np
-
+#streamlit run app.py
 model = MobileNetV2(weights='imagenet')
 
 def extract_features(img_path):
@@ -17,4 +17,7 @@ def generate_description(preds):
     labels = [p[1].replace('_', ' ') for p in preds]
     desc = f"A trendy {labels[0]} perfect for everyday wear. "
     hashtags = " ".join([f"#{label.replace(' ', '')}" for label in labels])
-    return desc + hashtags
+    full_desc = desc + hashtags
+    print("[DEBUG] Generated description:", full_desc)
+    return full_desc
+
