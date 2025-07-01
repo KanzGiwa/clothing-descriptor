@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: clothing-descriptor
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    runtime: python
+    pythonVersion: 3.10
+    repo: https://github.com/KanzGiwa/clothing-descriptor
+    branch: main
